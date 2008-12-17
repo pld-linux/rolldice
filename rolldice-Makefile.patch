@@ -1,0 +1,27 @@
+--- rolldice-1.10.orig/Makefile~	2008-12-17 12:14:18.000000000 +0100
++++ rolldice-1.10.orig/Makefile	2008-12-17 12:13:52.000000000 +0100
+@@ -1,6 +1,6 @@
+ # Edited for Debian GNU/Linux
+ DESTDIR = 
+-BIN = $(DESTDIR)/usr/games
++BIN = $(DESTDIR)/usr/bin
+ MAN = $(DESTDIR)/usr/share/man/man6
+ CC = gcc
+ OBJFILES = main.o rolldice.o
+@@ -10,13 +10,13 @@
+ all: rolldice
+ 	
+ rolldice: $(OBJFILES)
+-	$(CC) $(OBJFILES) -g -o rolldice $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJFILES) -g -o rolldice $(LIBS)
+ 	
+ main.o: main.c $(INCLUDES)
+-	$(CC) -g -c main.c
++	$(CC) $(CFLAGS) -g -c main.c
+ 
+ rolldice.o: rolldice.c $(INCLUDES)
+-	$(CC) -g -c rolldice.c
++	$(CC) $(CFLAGS) -g -c rolldice.c
+ 
+ install: $(EXECFILES)
+ 	install -d $(BIN) $(MAN)
