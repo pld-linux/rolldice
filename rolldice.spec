@@ -5,7 +5,7 @@ Version:	1.10
 Release:	1
 License:	GPL v2+
 Group:		Applications
-Source0:	http://ftp.de.debian.org/debian/pool/main/r/rolldice/%{name}_%{version}.orig.tar.gz
+Source0:	ftp://ftp.debian.org/debian/pool/main/r/rolldice/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	c65d37f81e80d0d5db6c49c08cf3b484
 Patch0:		%{name}-Makefile.patch
 URL:		http://packages.debian.org/source/sid/rolldice
