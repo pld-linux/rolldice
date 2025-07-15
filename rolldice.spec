@@ -21,7 +21,7 @@ kością na wiele różnych sposobów.
 
 %prep
 %setup -q -n %{name}-%{version}.orig
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} \
